@@ -33,5 +33,6 @@ class MemoryReader {
         matches.push([i, value])
       }
     }
+    return matches
   }
 }
