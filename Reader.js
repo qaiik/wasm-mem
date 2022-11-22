@@ -25,7 +25,7 @@ class MemoryReader {
     return new TextDecoder("utf-8").decode(bytes.slice(0, strlen))
   }
   
-  searchEQ(type, value, start=0x00, end=this.mem.buffer.byteSize) {
+  searchEQ(type, value, start=0x00, end=this.mem.buffer.byteLength) {
     let matches = [];
     for (let i = start; i < end; i++) {
       let v = read(i, type) 
