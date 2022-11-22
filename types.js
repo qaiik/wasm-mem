@@ -4,5 +4,6 @@ ByteTypes = {
   "i32": Uint32Array,
   "i64": BigUint64Array,
   "f32": Float32Array,
-  "f64": Float64Array
+  "f64": Float64Array,
+  "str": Uint8Array
 }
