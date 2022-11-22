@@ -28,7 +28,7 @@ class MemoryReader {
   searchEQ(type, value, start=0x00, end=this.mem.buffer.byteLength) {
     let matches = [];
     for (let i = start; i < end; i++) {
-      let v = read(i, type) 
+      let v = this.read(i, type) 
       if (v == value) {
         matches.push([i, value])
       }
