@@ -7,3 +7,12 @@ ByteTypes = {
   "f64": Float64Array,
   "str": Uint8Array
 }
+
+ByteMult = {
+  "i8": 8/8,
+  "i16": 16/8,
+  "i32": 32/8,
+  "i64": 64/8,
+  "f32": 32/8,
+  "f64": 64/8
+}
