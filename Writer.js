@@ -3,7 +3,7 @@ class MemoryWriter {
     this.mem = mem;
   }
   
-  Write(ptr, value, type="i32", extra=false) {
+  Write(ptr, value, type="i32", originalLength=false) {
     if (type !== "str") {
       let bytes = new ByteTypes[type](this.mem.buffer, ptr)
       bytes[0] = value
@@ -16,7 +16,7 @@ class MemoryWriter {
     }
     
     if (extra) {
-      for (let i = 0; i < extra; i++) {
+      for (let i = 0; i < originalLength - value.length; i++) {
         bytes[value.length + i] = "\x00" 
       }
     }
