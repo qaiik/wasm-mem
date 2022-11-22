@@ -4,6 +4,7 @@ class MemoryReader {
   }
   
   read(ptr, type="i32") {
-    let bytes = new ByteTypes[type](this.mem, ptr)
+    let bytes = new ByteTypes[type](this.mem.buffer, ptr)
+    return bytes[0]
   }
 }
